@@ -12,4 +12,12 @@ class Movie
     @@all
   end
 
+
+  def queue_items
+
+    QueueItem.all.select do |queueitems|
+      queueitems.movie == self
+    end
+  end
+
 end
